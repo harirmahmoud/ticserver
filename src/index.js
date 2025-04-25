@@ -9,6 +9,8 @@ const app=express();
 const port=3000;
 app.use(cors());
 app.use(express.json());
+console.log(process.env.API_KEY);
+console.log(process.env.API_SECRET);
 const api_key=process.env.API_KEY;
 const api_secret=process.env.API_SECRET;
 const serverClient= StreamChat.getInstance(api_key,api_secret);
